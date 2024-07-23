@@ -2,7 +2,7 @@ name: 'Output buildings'
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   default:
     runs-on: ubuntu-latest
