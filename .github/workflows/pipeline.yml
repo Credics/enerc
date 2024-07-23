@@ -10,7 +10,7 @@ jobs:
       image: python:3.11
     steps:
       - name: Install dependencies
-        run: pip install geopandas
+        run: pip install geopandas==0.14
       - name: Checkout
         uses: actions/checkout@v4
       - name: Run script
