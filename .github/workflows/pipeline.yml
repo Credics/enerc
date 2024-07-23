@@ -7,7 +7,7 @@ jobs:
   default:
     runs-on: ubuntu-latest
     container:
-      image: python:3.11-alpine
+      image: python:3.11
     steps:
       - name: Install dependencies
         run: pip install geopandas
