@@ -19,6 +19,7 @@ buildings = buildings.loc[buildings.intersects(part)]
 
 def save_buildings(min_area=200):
     min_area_buildings: gpd.GeoDataFrame = buildings.loc[buildings.area >= min_area]
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     min_area_buildings.to_csv(OUTPUT_DIR / 'buildings.csv')
 
 
