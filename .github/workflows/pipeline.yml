@@ -1,4 +1,4 @@
-name: 'Link Checker: All English'
+name: 'Output buildings'
 on:
   push:
     branches:
