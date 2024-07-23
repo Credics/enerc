@@ -1,0 +1,21 @@
+name: 'Link Checker: All English'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.11-alpine
+    steps:
+      - name: Install dependencies
+        run: pip install geopandas
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Runb script
+        run: python enercity/main.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: buildings.csv
+          path: output/buildings.csv
