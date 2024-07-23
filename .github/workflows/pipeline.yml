@@ -13,8 +13,12 @@ jobs:
         run: pip install geopandas
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Runb script
-        run: python enercity/main.py
+      - name: Run script
+        run: pwd
+      - name: Run script
+        run: ls -la
+      - name: Run script
+        run: ls -la ..
       - uses: actions/upload-artifact@v4
         with:
           name: buildings.csv
